@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import { GlobalProvider } from './Context/GlobalState';
+import { Navbar, Carousel, Description} from './components/index';
+import { fetchData } from './Context/GlobalState';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+
+   componentDidMount(){
+     const url = 'https://sleepy-everglades-26976.herokuapp.com/api/wednesday'
+    fetch(url).then(res=>res.json).then(data=>console.log(data)).catch(() => console.log("Can’t access " + url + " response. Blocked by browser?"))
+   }
+
+  render(){
+    return (
+      <GlobalProvider>
+        <div className="App">
+          <Navbar />
+          <Carousel />
+          <Description />
+        </div>
+      </GlobalProvider>
+  
+    );
+  }
+ 
 }
 
 export default App;
