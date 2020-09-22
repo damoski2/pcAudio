@@ -1,0 +1,7 @@
+[0907/124340.983:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0907/124341.228:ERROR:exception_snapshot_win.cc(99)] thread ID 24872 not found in process
+[0908/122139.902:ERROR:process_info.cc(375)] NtQuerySystemInformation SystemExtendedHandleInformation: The specified information record length does not match the length required for the specified information class. (0xc0000004)
+[0909/193858.255:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0909/193858.794:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0909/193858.825:ERROR:exception_snapshot_win.cc(99)] thread ID 7380 not found in process
+[0909/193858.825:ERROR:exception_snapshot_win.cc(99)] thread ID 3680 not found in process

@@ -1,29 +1,57 @@
 import React, { Component } from 'react';
-import './App.css';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import style from './App.module.css';
 import { GlobalProvider } from './Context/GlobalState';
-import { Navbar, Carousel, Description} from './components/index';
-import { fetchData } from './Context/GlobalState';
+import { Auth_firebase } from './components/index';
+import { fetchWednesday, fetchSunday } from './Context/GlobalState';
+
 
 class App extends Component {
 
-   componentDidMount(){
-     const url = 'https://sleepy-everglades-26976.herokuapp.com/api/wednesday'
-    fetch(url).then(res=>res.json).then(data=>console.log(data)).catch(() => console.log("Can’t access " + url + " response. Blocked by browser?"))
-   }
 
-  render(){
+  drawerToggleOpen = () => {
+    this.setState((prevState) => {
+      return { navdrawerOpen: !prevState.navdrawerOpen }
+    })
+  }
+
+  drawerToggleClose = () => {
+    this.setState({ navdrawerOpen: false })
+  }
+
+
+  state = {
+    wednesday_data: {},
+    sunday_data: {},
+    navdrawerOpen: false,
+  }
+
+
+  async componentDidMount() {
+    const fetchedwed = await fetchWednesday();
+    this.setState({ wednesday_data: fetchedwed })
+
+    const fetchedsun = await fetchSunday();
+    this.setState({ sunday_data: fetchedsun })
+  }
+
+
+
+
+  render() {
+    const { wednesday_data, sunday_data, navdrawerOpen } = this.state;
+
+    
     return (
-      <GlobalProvider>
-        <div className="App">
-          <Navbar />
-          <Carousel />
-          <Description />
-        </div>
-      </GlobalProvider>
-  
+      <div className={style.container}>
+        <Auth_firebase 
+        navdrawerOpen={navdrawerOpen} 
+        drawerToggleOpen={this.drawerToggleOpen} 
+        drawerToggleClose={this.drawerToggleClose} />
+      </div>
+
     );
   }
- 
 }
 
 export default App;

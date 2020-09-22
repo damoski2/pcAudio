@@ -1,0 +1,44 @@
+.container{
+    margin-top: 4em;
+    background: #1e2427;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.detail{
+    color: #ffffff;
+    margin-top: 1em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.social_links{
+    margin-top: .5em;
+    margin-bottom: 1em;
+}
+.social_links a{
+    padding: 0 13px;
+    font-size: 29px;
+}
+
+.social_links .facebook{
+    color: #1512c0;
+}
+
+.social_links .twitter{
+    color: #0e7fc0;
+}
+
+.social_links .instagram{
+    color: #ec882a;
+}
+
+.social_links .github{
+    color: #fff;
+}
+
+.social_links .youtube{
+    color: #ff0000;
+}

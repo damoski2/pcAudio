@@ -1,43 +1,17 @@
-import React, { Component } from 'react'
-import carousel1 from '../../Images/carousel1.jpg';
-import carousel2 from '../../Images/carousel2.jpg';
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import React from 'react';
 import style from './Carousel.module.css';
 
-export default class Carousel extends Component {
-    render() {
-        const settings = {
-            dots: false,
-            infinite: true,
-            speed: 500,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-        };
-
-        const photos = [
-            {
-                src: carousel1,
-            },
-            {
-                src: carousel2,
-            }
-        ]
-
-        return (
-            <div className={style}>
-                <Slider {...settings}>
-                    {photos.map((photo) => {
-                        return (
-                            <div className={style.carousel}>
-                                <img src={photo.src} />
-                            </div>
-                        )
-                    })}
-                </Slider>
+const Carousel = () => {
+    return (
+        <section className={style.container}>
+            <div className={style.carousel}>
+                <div className={style.info}>
+                    <h1>Potter's Court Audio</h1>
+                    <p>"For I am not ashamed of the gospel, for it is the power of God for salvation to everyone who believes, to the Jew first and also to the Greek."<span>-Romans 1:16</span></p>
+                </div>
             </div>
-        )
-    }
+        </section>
+    )
 }
 
+export default Carousel

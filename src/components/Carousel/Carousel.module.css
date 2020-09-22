@@ -1,9 +1,52 @@
 .container{
     width: 100%;
     height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.carousel img{
+.carousel{
+    background-image: url(../../Images/new_carousel.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
     width: 100%;
-    height: 80vh;
+    height: 100vh;  
+}
+
+.info{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(65, 58, 58);
+}
+
+.info h1{
+    width: 100%;
+    font-size: 50px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.info p{
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.info span{
+    font-style: italic;
+    font-size: 17px;
+    color: #2da5d4;
+}
+
+@media(max-width:768px){
+    .info{
+        width: 100%;
+        text-align: center;
+    }
+
+    .info h1{
+        font-size: 30px;
+    }
 }

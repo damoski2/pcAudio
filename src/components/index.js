@@ -1,4 +1,16 @@
 export { default as Navbar } from './Navbar/Navbar';
 export { default as Carousel } from './Carousel/Carousel';
 export { default as Description } from './Description/Description';
-export { default as Sunday_service } from './Sunday_service/Sunday_service';
+export { default as Sunday_header } from './Sunday_service/Sunday_header';
+export { default as Sunday_holder } from './Sunday_service/Sunday_holder';
+export { default as Wednesday_header } from './Wednesday_service/Wednesday_header';
+export { default as Wednesday_holder } from './Wednesday_service/Wednesday_holder';
+export { default as Sidedrawer } from './Navbar/Navdrawer/Sidedrawer';
+export { default as Backdrop } from './Backdrop/Backdrop';
+export { default as Footer } from './Footer/Footer';
+export { default as ScrollArrow } from './ScrollToTop/ScrollArrow';
+export { default as About } from './About/About';
+export { default as Followup } from './Followup/Followup'; 
+export { default as Auth_firebase } from './Authentication/Auth_firebase';
+export { default as WelcomeHead } from './WelcomeHead/WelcomeHead';
+export { default as Quotes } from './Quotes/Quotes';
